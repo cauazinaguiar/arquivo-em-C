@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+char c;
+
+FILE *arq;
+
+arq=fopen("arquivo.txt", "r");
+
+if(arq){
+	while((c=getc(arq))!= EOF){
+		printf("%c\n", c);
+	}
+}else{
+	printf("arquivo nao existe");
+}
+fclose(arq);
+
+    return 0;
+}
